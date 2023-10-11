@@ -1,3 +1,4 @@
+/* General Stylings */
 body {
     box-sizing: border-box;
     margin: 0;
@@ -11,17 +12,20 @@ body {
     height: 100vh;
 }
 
+/* Home Row Stylings */
 header {
     grid-column: 1 / 3;
     background-color: blue;
 }
 
+/* Stations Container Stylings */
 aside {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     background-color: green;
 }
 
+/* Station Playlist Stylings */
 main {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -32,16 +36,19 @@ main {
     grid-template-rows: 1fr 4fr;
 }
 
+/* Station Data/Info Stylings */
 .station-info {
     grid-row: 1 / 2;
     background-color: blueviolet;
 }
 
+/* Station Songs Stylings */
 .station-songs {
     grid-row: 2 / 3;
     background-color: aquamarine;
 }
 
+/* Play Stylings */
 footer {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
