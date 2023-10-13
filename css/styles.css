@@ -18,6 +18,24 @@ header {
     background-color: blue;
 }
 
+#home-row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+#home-row a {
+    color: #FFF;
+}
+
+#home-row p {
+    margin: 0px;
+}
+
 /* Stations Container Stylings */
 aside {
     grid-column: 1 / 2;
