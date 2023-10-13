@@ -23,11 +23,6 @@ header {
     justify-content: space-evenly;
 }
 
-a {
-    text-decoration: none;
-
-}
-
 #home-row a {
     color: #000;
 }
