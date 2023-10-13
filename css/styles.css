@@ -15,7 +15,7 @@ body {
 /* Home Row Stylings */
 header {
     grid-column: 1 / 3;
-    background-color: blue;
+    background-color: lightcyan;
 }
 
 #home-row {
@@ -29,7 +29,7 @@ a {
 }
 
 #home-row a {
-    color: #FFF;
+    color: #000;
 }
 
 #home-row p {
@@ -40,7 +40,7 @@ a {
 aside {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    background-color: green;
+    background-color: lightgrey;
 }
 
 /* Station Playlist Stylings */
@@ -57,20 +57,20 @@ main {
 /* Station Data/Info Stylings */
 .station-info {
     grid-row: 1 / 2;
-    background-color: blueviolet;
+    background-color: lightblue;
 }
 
 /* Station Songs Stylings */
 .station-songs {
     grid-row: 2 / 3;
-    background-color: aquamarine;
+    background-color: lightcyan;
 }
 
 /* Play Stylings */
 footer {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    background-color: orange;
+    background-color: lightblue;
 
     display: flex;
     justify-content: space-between;
