@@ -17,4 +17,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         "hip-hop": "Crispy Hip Hop FM"
     }
 
+    let playlist_songs = document.getElementById("station-songs")
+    let song = document.createElement("p")
+    song.innerHTML = "Test"
+    playlist_songs.append(song)
+
 });
