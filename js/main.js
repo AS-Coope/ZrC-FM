@@ -1,7 +1,3 @@
-const stations = {
-    "hip-hop": "Crispy Hip Hop Beats"
-}
-
 function changeSong() {
     let currentSong = document.getElementById("play-audio")
     let currentSongName = document.getElementById("song-name")
@@ -14,3 +10,11 @@ function changeSong() {
         currentSongName.innerHTML = "ZrC - Trap Test (130 bpm)"
     }
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+
+    const stations = {
+        "hip-hop": "Crispy Hip Hop Beats"
+    }
+
+});
