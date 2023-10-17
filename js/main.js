@@ -18,8 +18,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     let playlist_songs = document.getElementById("station-songs")
-    let song = document.createElement("p")
-    song.innerHTML = "Test"
-    playlist_songs.append(song)
+
+    for (let numOfSongsInDirectory = 0; numOfSongsInDirectory < 10; numOfSongsInDirectory++) {
+        let song = document.createElement("p")
+        song.innerHTML = `Test ${numOfSongsInDirectory}`
+        playlist_songs.append(song)
+    }
 
 });
