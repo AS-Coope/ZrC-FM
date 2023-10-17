@@ -44,19 +44,19 @@ main {
     grid-row: 2 / 3;
 }
 
-.playlist-container {
+#playlist-container {
     display: grid;
     grid-template-rows: 1fr 4fr;
 }
 
 /* Station Data/Info Stylings */
-.station-info {
+#station-info {
     grid-row: 1 / 2;
     background-color: lightblue;
 }
 
 /* Station Songs Stylings */
-.station-songs {
+#station-songs {
     grid-row: 2 / 3;
     background-color: lightcyan;
 }
