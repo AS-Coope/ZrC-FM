@@ -1,3 +1,7 @@
+const stations = {
+    "hip-hop": "Crispy Hip Hop Beats"
+}
+
 function changeSong() {
     let currentSong = document.getElementById("play-audio")
     let currentSongName = document.getElementById("song-name")
