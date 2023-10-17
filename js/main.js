@@ -14,7 +14,7 @@ function changeSong() {
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const stations = {
-        "hip-hop": "Crispy Hip Hop Beats"
+        "hip-hop": "Crispy Hip Hop FM"
     }
 
 });
