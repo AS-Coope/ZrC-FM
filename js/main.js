@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
             "name": "Hip Hop",
             "songs": {
                 1: {
-                    url: "audio/ZrC - Trap Test (130 bpm).mp3",
+                    url: "audio/Hip Hop/ZrC - Trap Test (130 bpm).mp3",
                     "song_name": "ZrC - Trap Test (130 bpm)"
                 },
                 2: {
-                    url: "audio/ZrC - XLR8 [Snippet - 808 note change] (165bpm).mp3",
+                    url: "audio/Hip Hop/ZrC - XLR8 [Snippet - 808 note change] (165bpm).mp3",
                     song_name: "XLR8 [Snippet - 808 note change] (165bpm)"
                 }
             }
