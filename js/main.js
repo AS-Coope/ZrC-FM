@@ -19,21 +19,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
             "songs": {
                 1: {
                     url: "audio/ZrC - Trap Test (130 bpm).mp3",
-                    name: "ZrC - Trap Test (130 bpm)"
+                    "song_name": "ZrC - Trap Test (130 bpm)"
                 },
                 2: {
                     url: "audio/ZrC - XLR8 [Snippet - 808 note change] (165bpm).mp3",
-                    name: "XLR8 [Snippet - 808 note change] (165bpm)"
+                    song_name: "XLR8 [Snippet - 808 note change] (165bpm)"
                 }
             }
         }
     }
 
+    // get the number of songs in a specific station
+    let hip_hop_length = Object.values(stations["hip-hop"]["songs"]).length
     let playlist_songs = document.getElementById("station-songs")
 
-    for (let numOfSongsInDirectory = 0; numOfSongsInDirectory < 10; numOfSongsInDirectory++) {
+    for (let numOfSongsInDirectory = 1; numOfSongsInDirectory <= hip_hop_length; numOfSongsInDirectory++) {
         let song = document.createElement("p")
-        song.innerHTML = `Test ${numOfSongsInDirectory}`
+        song.innerHTML = stations["hip-hop"]["songs"][numOfSongsInDirectory]["song_name"]
         playlist_songs.append(song)
     }
 
