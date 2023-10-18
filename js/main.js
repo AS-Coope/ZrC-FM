@@ -14,7 +14,19 @@ function changeSong() {
 document.addEventListener('DOMContentLoaded', (event) => {
 
     const stations = {
-        "hip-hop": "Crispy Hip Hop FM"
+        "hip-hop": {
+            "name": "Hip Hop",
+            "songs": {
+                1: {
+                    url: "audio/ZrC - Trap Test (130 bpm).mp3",
+                    name: "ZrC - Trap Test (130 bpm)"
+                },
+                2: {
+                    url: "audio/ZrC - XLR8 [Snippet - 808 note change] (165bpm).mp3",
+                    name: "XLR8 [Snippet - 808 note change] (165bpm)"
+                }
+            }
+        }
     }
 
     let playlist_songs = document.getElementById("station-songs")
