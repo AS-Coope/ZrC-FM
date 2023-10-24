@@ -11,8 +11,7 @@ function changeSong() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-
+function main() {
     const stations = {
         "hip-hop": {
             "name": "Hip Hop",
@@ -38,5 +37,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         song.innerHTML = stations["hip-hop"]["songs"][numOfSongsInDirectory]["song_name"]
         playlist_songs.append(song)
     }
+}
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    main();
 });
