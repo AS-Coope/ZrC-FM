@@ -1,6 +1,9 @@
 let changeSongBtn = document.getElementById("change-song");
+let hipHopStation = document.getElementById("hip-hop");
+let currentStation;
+
 const stations = {
-    "hipHop": {
+    "hip-hop": {
         "name": "Hip Hop",
         "songs": {
             1: {
@@ -15,6 +18,10 @@ const stations = {
     }
 };
 
+// only to test to ensure the song changes
+// realistically, this (event listener) will be applied to every song in the
+// station songs ("All Songs") area, so that the current song can be changed
+// to that song, unless that song is currently being played
 changeSongBtn.addEventListener('click', () => {
     changeSong();
 });
@@ -32,19 +39,37 @@ function changeSong() {
     }
 }
 
-function main() {
+/* 
+    This works for each station. So, when a station is clicked from the side bar, 
+    the following happens, regarding that specific station
+*/
+function populateStationSongsContainer(stationElement) {
 
+    const stationElementId = stationElement.getAttribute("id");
     // get the number of songs in a specific station
-    const hipHopLength = Object.values(stations["hipHop"]["songs"]).length;
+    const stationLength = Object.values(stations[stationElementId]["songs"]).length;
     let playlistSongs = document.getElementById("station-songs");
 
-    for (let numOfSongsInDirectory = 1; numOfSongsInDirectory <= hipHopLength; numOfSongsInDirectory++) {
-        let song = document.createElement("p");
-        song.textContent = stations["hipHop"]["songs"][numOfSongsInDirectory]["songName"];
-        playlistSongs.append(song);
+    // INTRODUCE FUNCTIONALITY TO REMOVE SONGS FROM CONTAINER ONCE THE STATION IS SWITCHED
+    if (currentStation !== stationElementId) {
+        for (let numOfSongsInDirectory = 1; numOfSongsInDirectory <= stationLength; numOfSongsInDirectory++) {
+            let song = document.createElement("p");
+            song.textContent = stations[stationElementId]["songs"][numOfSongsInDirectory]["songName"];
+            playlistSongs.append(song);
+        }
     }
+    currentStation = stationElementId;
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    main();
+/* Eventually, when more stations are created, a nodelist of all the stations will
+be captured from the DOM for all the elements with the class station.
+A foreach will be ran on the nodelist to apply the event listener to each
+node and when that specific station is clicked, then it will call main and pass
+itself as the argument (instead of how hipHopStation alone is passed here)
+*/
+hipHopStation.addEventListener('click', () => {
+    populateStationSongsContainer(hipHopStation);
 });
+/* document.addEventListener('DOMContentLoaded', (event) => {
+    main();
+}); */
