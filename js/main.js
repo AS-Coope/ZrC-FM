@@ -1,3 +1,8 @@
+let changeSongBtn = document.getElementById("change-song");
+changeSongBtn.addEventListener('click', () => {
+    changeSong();
+});
+
 function changeSong() {
     let currentSong = document.getElementById("play-audio")
     let currentSongName = document.getElementById("song-name")
