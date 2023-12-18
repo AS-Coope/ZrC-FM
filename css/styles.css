@@ -45,6 +45,10 @@ aside {
     background-color: lightgrey;
 }
 
+aside * {
+    cursor: pointer;
+}
+
 /* Station Playlist Stylings */
 main {
     grid-column: 2 / 3;
