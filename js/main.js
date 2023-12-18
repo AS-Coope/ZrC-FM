@@ -15,6 +15,15 @@ const stations = {
                 "songName": "XLR8 [Snippet - 808 note change] (165bpm)"
             }
         }
+    },
+    "dnb": {
+        "name": "Drum and Bass",
+        "songs": {
+            1: {
+                "url": "Intelligent DnB.mp3",
+                "songName": "Intelligent DnB"
+            }
+        }
     }
 };
 
