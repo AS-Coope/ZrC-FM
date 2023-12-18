@@ -1,6 +1,8 @@
 let changeSongBtn = document.getElementById("change-song");
 let hipHopStation = document.getElementById("hip-hop");
+let dnbStation = document.getElementById("dnb");
 let currentStation;
+console.log(currentStation);
 
 const stations = {
     "hip-hop": {
@@ -78,6 +80,10 @@ itself as the argument (instead of how hipHopStation alone is passed here)
 */
 hipHopStation.addEventListener('click', () => {
     populateStationSongsContainer(hipHopStation);
+});
+
+dnbStation.addEventListener('click', () => {
+    populateStationSongsContainer(dnbStation);
 });
 /* document.addEventListener('DOMContentLoaded', (event) => {
     main();
