@@ -1,8 +1,8 @@
 let changeSongBtn = document.getElementById("change-song");
 let hipHopStation = document.getElementById("hip-hop");
 let dnbStation = document.getElementById("dnb");
+let stationSongList;
 let currentStation;
-console.log(currentStation);
 
 const stations = {
     "hip-hop": {
@@ -57,19 +57,41 @@ function changeSong() {
 function populateStationSongsContainer(stationElement) {
 
     const stationElementId = stationElement.getAttribute("id");
+    // store all station songs if present
+    stationSongList = document.querySelectorAll(".station-song");
+
     // get the number of songs in a specific station
     const stationLength = Object.values(stations[stationElementId]["songs"]).length;
     let playlistSongs = document.getElementById("station-songs");
 
-    // INTRODUCE FUNCTIONALITY TO REMOVE SONGS FROM CONTAINER ONCE THE STATION IS SWITCHED
+    // if a station is selected, and another station's songs are already being 
+    // displayed in the Station Songs container, then, those songs, currently
+    // in the Station Songs container are first removed to make way for only
+    // the songs in the station selected
+    if (stationSongList.length > 0 && currentStation !== stationElementId) {
+        removeCurrentSongs(stationSongList);
+    }
+
+    // add the currently selected station's songs to the Station Songs container
     if (currentStation !== stationElementId) {
-        for (let numOfSongsInDirectory = 1; numOfSongsInDirectory <= stationLength; numOfSongsInDirectory++) {
-            let song = document.createElement("p");
-            song.textContent = stations[stationElementId]["songs"][numOfSongsInDirectory]["songName"];
-            playlistSongs.append(song);
-        }
+        addCurrentSongs(stationLength, stationElementId, playlistSongs);
     }
     currentStation = stationElementId;
+}
+
+function removeCurrentSongs(songList) {
+    songList.forEach((elem) => {
+        (elem.parentNode.removeChild(elem));
+    });
+}
+
+function addCurrentSongs(stationLength, stationElemId, playlistSongs) {
+    for (let numOfSongsInDirectory = 1; numOfSongsInDirectory <= stationLength; numOfSongsInDirectory++) {
+        let song = document.createElement("p");
+        song.className = "station-song";
+        song.textContent = stations[stationElemId]["songs"][numOfSongsInDirectory]["songName"];
+        playlistSongs.append(song);
+    }
 }
 
 /* Eventually, when more stations are created, a nodelist of all the stations will
